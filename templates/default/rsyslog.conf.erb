@@ -45,12 +45,12 @@ $InputTCPServerRun <%= node['rsyslog']['port'] %>
   $ModLoad imtcp
   $InputTCPServerRun <%= node['rsyslog']['port'] %>
 <% end -%>
+  <% end -%>
 <% if node['rsyslog']['protocol'] =~ /udp/ %>
   $ModLoad imudp
   $UDPServerAddress <%= node['rsyslog']['bind'] %>
   $UDPServerRun <%= node['rsyslog']['port'] %>
 <% end -%>
-  <% end -%>
 <% end -%>
 
 ###########################
